@@ -102,6 +102,28 @@ export default function MenuPage() {
             ))}
           </MenuSection>
         )}
+
+        {active === 'mains' && (
+          <MenuSection
+            emoji="🍖"
+            title={<>Plats <em>Martiniquais</em></>}
+            subtitle="Le cœur de la cuisine créole, généreux et parfumé."
+          >
+            {Object.values(menu.mains).map(({ label, dishes }) => (
+              <MenuSubsection
+                key={label}
+                label={label}
+              >
+                {dishes.map((dish) => (
+                  <DishCard
+                    key={dish.id}
+                    dish={dish}
+                  />
+                ))}
+              </MenuSubsection>
+            ))}
+          </MenuSection>
+        )}
       </Container>
     </main >
   );
