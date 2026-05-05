@@ -6,6 +6,7 @@ const NAV_LINKS = [
   { label: 'Accueil', href: '/' },
   { label: 'Menu', href: '/menu' },
   { label: 'Contact', href: '/#contact' },
+  { label: 'Réservation', href: '/#reservation' },
 ];
 
 const CONTACT_LINKS = [
