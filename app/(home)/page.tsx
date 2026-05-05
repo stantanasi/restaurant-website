@@ -1,5 +1,6 @@
 import About from '@/app/(home)/sections/About';
 import Ambiance from '@/app/(home)/sections/Ambiance';
+import FeaturedDishes from '@/app/(home)/sections/FeaturedDishes';
 import Hero from '@/app/(home)/sections/Hero';
 import Info from '@/app/(home)/sections/Info';
 import Reservation from '@/app/(home)/sections/Reservation';
@@ -41,6 +42,7 @@ export default function HomePage() {
         ))}
       </Marquee>
       <About />
+      <FeaturedDishes />
       <Ambiance />
       <Info />
       <Reservation />
