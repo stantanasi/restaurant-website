@@ -2,7 +2,7 @@
 
 import Hero from '@/app/menu/sections/Hero';
 import { menu } from '@/data/restaurant.data';
-import { Container, Grid, Stack, Tab, Tabs } from '@mui/material';
+import { Container, Grid, Stack, Tab, Tabs, Typography } from '@mui/material';
 import { useState } from 'react';
 import { plus_jakarta_sans } from '../fonts';
 import DishCard from './components/DishCard';
@@ -180,6 +180,31 @@ export default function MenuPage() {
             </MenuSubsection>
           </MenuSection>
         )}
+
+
+        <Stack
+          direction="row"
+          spacing={1.5}
+          sx={{
+            alignItems: 'center',
+            background: '#D4E8C2',
+            borderRadius: 1,
+            marginTop: 6,
+            paddingX: { xs: '1.5rem', sm: '2rem' },
+            paddingY: { xs: '1.25rem', sm: '1.5rem' },
+          }}
+        >
+          <Typography sx={{ fontSize: '1.5rem' }}>
+            🌿
+          </Typography>
+
+          <Typography sx={{ color: '#1D3A1A', fontSize: '0.875rem', lineHeight: 1.65 }}>
+            <strong>Allergènes & régimes :</strong> Nos plats contiennent du gluten, des crustacés
+            et des fruits à coque. Nous adaptons nos recettes selon vos besoins — signalez-le lors
+            de la réservation. Tous nos plats sont cuisinés dans la même cuisine, des traces de
+            croisement peuvent exister.
+          </Typography>
+        </Stack>
       </Container>
     </main >
   );
