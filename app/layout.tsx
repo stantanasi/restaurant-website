@@ -9,7 +9,7 @@ import { fraunces, plus_jakarta_sans } from './fonts';
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "The Restaurant",
+  title: "Kay Manman",
   description: "Un modèle de site web haute performance pour établissements gastronomiques",
 };
 
