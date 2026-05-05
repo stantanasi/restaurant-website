@@ -9,6 +9,7 @@ import { useEffect, useState } from 'react';
 const NAV_LINKS = [
   { label: 'Accueil', href: '/' },
   { label: 'Menu', href: '/menu' },
+  { label: 'Contact', href: '/#contact' },
 ];
 
 export default function Navbar() {

@@ -1,6 +1,7 @@
 import About from '@/app/(home)/sections/About';
 import Ambiance from '@/app/(home)/sections/Ambiance';
 import Hero from '@/app/(home)/sections/Hero';
+import Info from '@/app/(home)/sections/Info';
 import Marquee from '@/components/ui/Marquee';
 import { Typography } from '@mui/material';
 import { Fragment } from 'react';
@@ -40,6 +41,7 @@ export default function HomePage() {
       </Marquee>
       <About />
       <Ambiance />
+      <Info />
     </main>
   );
 }
