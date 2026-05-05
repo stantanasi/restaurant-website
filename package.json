@@ -1,7 +1,7 @@
 {
   "name": "restaurant-website",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "homepage": "https://stantanasi.github.io/restaurant-website",
   "scripts": {
     "build": "next build",
     "start": "next dev",

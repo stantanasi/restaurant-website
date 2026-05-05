@@ -6,7 +6,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import { ThemeProvider } from '@mui/material/styles';
 import type { Metadata } from "next";
 import { fraunces, plus_jakarta_sans } from './fonts';
-import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Kay Manman",
