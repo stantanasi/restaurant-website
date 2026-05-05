@@ -1,5 +1,9 @@
+import Hero from '@/app/menu/sections/Hero';
+
 export default function MenuPage() {
   return (
-    <div>Menu</div>
+    <main>
+      <Hero />
+    </main >
   );
 }
