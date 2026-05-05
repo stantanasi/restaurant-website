@@ -1,3 +1,4 @@
+import About from '@/app/(home)/sections/About';
 import Hero from '@/app/(home)/sections/Hero';
 import Marquee from '@/components/ui/Marquee';
 import { Typography } from '@mui/material';
@@ -36,6 +37,7 @@ export default function HomePage() {
           </Fragment>
         ))}
       </Marquee>
+      <About />
     </main>
   );
 }
