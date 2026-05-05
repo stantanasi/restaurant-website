@@ -6,6 +6,7 @@ import { Container, Grid, Stack, Tab, Tabs } from '@mui/material';
 import { useState } from 'react';
 import { plus_jakarta_sans } from '../fonts';
 import DishCard from './components/DishCard';
+import DrinkCard, { RumCard } from './components/DrinkCard';
 import MenuSection from './components/MenuSection';
 import MenuSubsection from './components/MenuSubsection';
 import SetMenuCard from './components/SetMenuCard';
@@ -144,6 +145,39 @@ export default function MenuPage() {
                 ))}
               </MenuSubsection>
             ))}
+          </MenuSection>
+        )}
+
+        {active === 'drinks' && (
+          <MenuSection
+            emoji="🍹"
+            title={<>Boissons & <em>Rhums</em></>}
+            subtitle="Les meilleurs rhums agricoles de l'île."
+          >
+            <MenuSubsection label="Ti' Punch & Cocktails">
+              {menu.drinks.cocktails?.map((drink) => (
+                <DrinkCard
+                  key={drink.id}
+                  drink={drink}
+                />
+              ))}
+            </MenuSubsection>
+            <MenuSubsection label="Rhums Agricoles — Sélection" variant="grid">
+              {menu.drinks.rums?.map((rum) => (
+                <RumCard
+                  key={rum.id}
+                  rum={rum}
+                />
+              ))}
+            </MenuSubsection>
+            <MenuSubsection label="Sans Alcool">
+              {menu.drinks.soft?.map((drink) => (
+                <DrinkCard
+                  key={drink.id}
+                  drink={drink}
+                />
+              ))}
+            </MenuSubsection>
           </MenuSection>
         )}
       </Container>
