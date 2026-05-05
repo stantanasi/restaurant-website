@@ -5,7 +5,9 @@ import { menu } from '@/data/restaurant.data';
 import { Container, Grid, Stack, Tab, Tabs } from '@mui/material';
 import { useState } from 'react';
 import { plus_jakarta_sans } from '../fonts';
+import DishCard from './components/DishCard';
 import MenuSection from './components/MenuSection';
+import MenuSubsection from './components/MenuSubsection';
 import SetMenuCard from './components/SetMenuCard';
 
 const TABS = [
@@ -76,6 +78,28 @@ export default function MenuPage() {
                 />
               ))}
             </Grid>
+          </MenuSection>
+        )}
+
+        {active === 'starters' && (
+          <MenuSection
+            emoji="🌶️"
+            title={<>Entrées <em>Créoles</em></>}
+            subtitle="Pour ouvrir l'appétit avec les saveurs de chez nous."
+          >
+            {Object.values(menu.starters).map(({ label, dishes }) => (
+              <MenuSubsection
+                key={label}
+                label={label}
+              >
+                {dishes.map((dish) => (
+                  <DishCard
+                    key={dish.id}
+                    dish={dish}
+                  />
+                ))}
+              </MenuSubsection>
+            ))}
           </MenuSection>
         )}
       </Container>
