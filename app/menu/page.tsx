@@ -124,6 +124,28 @@ export default function MenuPage() {
             ))}
           </MenuSection>
         )}
+
+        {active === 'desserts' && (
+          <MenuSection
+            emoji="🍮"
+            title={<>Desserts <em>Maison</em></>}
+            subtitle="Tous préparés le matin par notre équipe."
+          >
+            {Object.values(menu.desserts).map(({ label, dishes }) => (
+              <MenuSubsection
+                key={label}
+                label={label}
+              >
+                {dishes.map((dish) => (
+                  <DishCard
+                    key={dish.id}
+                    dish={dish}
+                  />
+                ))}
+              </MenuSubsection>
+            ))}
+          </MenuSection>
+        )}
       </Container>
     </main >
   );
