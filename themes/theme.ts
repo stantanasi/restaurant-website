@@ -22,6 +22,20 @@ const theme = createTheme({
   },
   shape: { borderRadius: 16 },
   components: {
+    MuiCssBaseline: {
+      styleOverrides: `
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      `
+    },
     MuiButton: {
       styleOverrides: {
         root: { textTransform: 'none', fontWeight: 700, borderRadius: 100 },
