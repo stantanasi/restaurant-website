@@ -1,4 +1,5 @@
 import About from '@/app/(home)/sections/About';
+import Ambiance from '@/app/(home)/sections/Ambiance';
 import Hero from '@/app/(home)/sections/Hero';
 import Marquee from '@/components/ui/Marquee';
 import { Typography } from '@mui/material';
@@ -38,6 +39,7 @@ export default function HomePage() {
         ))}
       </Marquee>
       <About />
+      <Ambiance />
     </main>
   );
 }
