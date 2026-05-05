@@ -1,3 +1,4 @@
+import Footer from '@/components/common/Footer';
 import Navbar from '@/components/common/Navbar';
 import theme from '@/themes/theme';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v16-appRouter';
@@ -30,6 +31,7 @@ export default function RootLayout({
 
             <Navbar />
             {children}
+            <Footer />
           </ThemeProvider>
         </AppRouterCacheProvider>
       </body>
