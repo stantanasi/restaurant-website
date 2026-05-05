@@ -1,9 +1,12 @@
 'use client';
 
 import Hero from '@/app/menu/sections/Hero';
-import { Stack, Tab, Tabs } from '@mui/material';
+import { menu } from '@/data/restaurant.data';
+import { Container, Grid, Stack, Tab, Tabs } from '@mui/material';
 import { useState } from 'react';
 import { plus_jakarta_sans } from '../fonts';
+import MenuSection from './components/MenuSection';
+import SetMenuCard from './components/SetMenuCard';
 
 const TABS = [
   { id: 'set-menus', label: '🍱 Formules' },
@@ -57,6 +60,25 @@ export default function MenuPage() {
           ))}
         </Tabs>
       </Stack>
+
+      <Container maxWidth="lg" sx={{ paddingY: { xs: 4, md: 6 } }}>
+        {active === 'set-menus' && (
+          <MenuSection
+            emoji="🍱"
+            title={<>Nos <em>Formules</em></>}
+            subtitle="Disponibles midi & soir, du mardi au samedi."
+          >
+            <Grid container spacing={3}>
+              {menu.setMenus.map((setMenu) => (
+                <SetMenuCard
+                  key={setMenu.id}
+                  setMenu={setMenu}
+                />
+              ))}
+            </Grid>
+          </MenuSection>
+        )}
+      </Container>
     </main >
   );
 }
